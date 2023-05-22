@@ -15,6 +15,7 @@
 		5B5E046D2A1A466D0023BC42 /* BankeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E046C2A1A466D0023BC42 /* BankeyUITests.swift */; };
 		5B5E046F2A1A466D0023BC42 /* BankeyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E046E2A1A466D0023BC42 /* BankeyUITestsLaunchTests.swift */; };
 		5B5E047E2A1A4B960023BC42 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E047D2A1A4B960023BC42 /* LoginView.swift */; };
+		5B5E04812A1B516B0023BC42 /* OnBoardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E04802A1B516B0023BC42 /* OnBoardingContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5B5E046C2A1A466D0023BC42 /* BankeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITests.swift; sourceTree = "<group>"; };
 		5B5E046E2A1A466D0023BC42 /* BankeyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5B5E047D2A1A4B960023BC42 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5B5E04802A1B516B0023BC42 /* OnBoardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,9 @@
 		5B5E044A2A1A466C0023BC42 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
-				5B5E047B2A1A4B440023BC42 /* Files */,
+				5B5E047F2A1B511C0023BC42 /* OnBoarding */,
 				5B5E047C2A1A4B770023BC42 /* Login */,
+				5B5E047B2A1A4B440023BC42 /* Files */,
 				5B5E044B2A1A466C0023BC42 /* AppDelegate.swift */,
 			);
 			path = Bankey;
@@ -138,6 +141,14 @@
 				5B5E047D2A1A4B960023BC42 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		5B5E047F2A1B511C0023BC42 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				5B5E04802A1B516B0023BC42 /* OnBoardingContainerViewController.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				5B5E047E2A1A4B960023BC42 /* LoginView.swift in Sources */,
 				5B5E04502A1A466C0023BC42 /* LoginViewController.swift in Sources */,
 				5B5E044C2A1A466C0023BC42 /* AppDelegate.swift in Sources */,
+				5B5E04812A1B516B0023BC42 /* OnBoardingContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
