@@ -12,17 +12,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    let loginViewController = LoginViewController()
+    let onBoadingContainerViewController = OnboardingContainerViewController()
+    let dummyViewController = DummyViewController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-//        window?.rootViewController = LoginViewController()
-        window?.rootViewController = OnboardingContainerViewController()
-        
+        loginViewController.delegate = self
+        onBoadingContainerViewController.delegate = self
+        dummyViewController.delegate = self
+        window?.rootViewController = loginViewController
         
         return true
     }
-
+    
 }
 
+extension AppDelegate: LoginViewControllerDelegate {
+    func didLogin() {
+        if LocalState.hasOnBoarded {
+            setRootView(dummyViewController)
+        } else  {
+            setRootView(onBoadingContainerViewController)
+        }
+    }
+}
+
+extension AppDelegate: OnBoardingContainerViewControllerDelegate {
+    func didFinishOnBoarding() {
+        LocalState.hasOnBoarded = true
+        setRootView(dummyViewController)
+    }
+}
+
+extension AppDelegate: LogoutDelegate {
+    func didLogout() {
+        setRootView(loginViewController)
+    }
+}
+
+extension AppDelegate {
+    func setRootView(_ vc:  UIViewController, animated: Bool = true) {
+        guard animated, let window = self.window else {
+            print("animation not implemented")
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return
+        }
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        UIView.transition(with: window,
+                          duration: 0.7,
+                          options: .transitionCrossDissolve,
+                          animations: nil,
+                          completion: nil)
+    }
+}
