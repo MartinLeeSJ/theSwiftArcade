@@ -26,40 +26,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onBoadingContainerViewController.delegate = self
         
-        mainViewController.setStatusBar()
-
-        window?.rootViewController = mainViewController
+        displayLogin()
         
         return true
+    }
+    
+    private func displayLogin() {
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreen() {
+        if LocalState.hasOnBoarded {
+            prepareMainView()
+            setRootViewController(mainViewController)
+        } else {
+            setRootViewController(onBoadingContainerViewController)
+        }
+    }
+    
+    private func prepareMainView() {
+        mainViewController.setStatusBar()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
     }
     
 }
 
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-        if LocalState.hasOnBoarded {
-            setRootView(mainViewController)
-        } else  {
-            setRootView(onBoadingContainerViewController)
-        }
+       displayNextScreen()
     }
 }
 
 extension AppDelegate: OnBoardingContainerViewControllerDelegate {
     func didFinishOnBoarding() {
         LocalState.hasOnBoarded = true
-        setRootView(mainViewController)
+        displayNextScreen()
     }
 }
 
 extension AppDelegate: LogoutDelegate {
     func didLogout() {
-        setRootView(loginViewController)
+        setRootViewController(loginViewController)
     }
 }
 
 extension AppDelegate {
-    func setRootView(_ vc:  UIViewController, animated: Bool = true) {
+    func setRootViewController(_ vc:  UIViewController, animated: Bool = true) {
         guard animated, let window = self.window else {
             print("animation not implemented")
             self.window?.rootViewController = vc
