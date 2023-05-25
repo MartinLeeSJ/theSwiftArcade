@@ -11,7 +11,6 @@
 		5B5E04502A1A466C0023BC42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E044F2A1A466C0023BC42 /* LoginViewController.swift */; };
 		5B5E04552A1A466D0023BC42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E04542A1A466D0023BC42 /* Assets.xcassets */; };
 		5B5E04582A1A466D0023BC42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5E04562A1A466D0023BC42 /* LaunchScreen.storyboard */; };
-		5B5E04632A1A466D0023BC42 /* BankeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E04622A1A466D0023BC42 /* BankeyTests.swift */; };
 		5B5E046D2A1A466D0023BC42 /* BankeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E046C2A1A466D0023BC42 /* BankeyUITests.swift */; };
 		5B5E046F2A1A466D0023BC42 /* BankeyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E046E2A1A466D0023BC42 /* BankeyUITestsLaunchTests.swift */; };
 		5B5E047E2A1A4B960023BC42 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E047D2A1A4B960023BC42 /* LoginView.swift */; };
@@ -27,6 +26,7 @@
 		5B979A922A1DF8BE00BB897F /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B979A912A1DF8BE00BB897F /* AccountSummaryCell.swift */; };
 		5B979A942A1F211D00BB897F /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B979A932A1F211D00BB897F /* Decimal+Utils.swift */; };
 		5B979A962A1F218400BB897F /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B979A952A1F218400BB897F /* CurrencyFormatter.swift */; };
+		5B979A982A1F2CF700BB897F /* CurrencyFormatterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B979A972A1F2CF700BB897F /* CurrencyFormatterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		5B5E04572A1A466D0023BC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5E04592A1A466D0023BC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B5E045E2A1A466D0023BC42 /* BankeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5E04622A1A466D0023BC42 /* BankeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyTests.swift; sourceTree = "<group>"; };
 		5B5E04682A1A466D0023BC42 /* BankeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5E046C2A1A466D0023BC42 /* BankeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITests.swift; sourceTree = "<group>"; };
 		5B5E046E2A1A466D0023BC42 /* BankeyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		5B979A912A1DF8BE00BB897F /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		5B979A932A1F211D00BB897F /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		5B979A952A1F218400BB897F /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		5B979A972A1F2CF700BB897F /* CurrencyFormatterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 		5B5E04612A1A466D0023BC42 /* BankeyTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B5E04622A1A466D0023BC42 /* BankeyTests.swift */,
+				5B979A972A1F2CF700BB897F /* CurrencyFormatterTest.swift */,
 			);
 			path = BankeyTests;
 			sourceTree = "<group>";
@@ -287,6 +287,7 @@
 					};
 					5B5E045D2A1A466D0023BC42 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 						TestTargetID = 5B5E04472A1A466C0023BC42;
 					};
 					5B5E04672A1A466D0023BC42 = {
@@ -368,7 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5E04632A1A466D0023BC42 /* BankeyTests.swift in Sources */,
+				5B979A982A1F2CF700BB897F /* CurrencyFormatterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +582,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SUDPP9C593;
@@ -590,6 +592,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.martin.BankeyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bankey";
@@ -601,6 +604,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SUDPP9C593;

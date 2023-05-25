@@ -32,7 +32,7 @@ extension AccountSummaryViewController {
         tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseID)
         tableView.rowHeight = AccountSummaryCell.rowHeight
         tableView.tableFooterView = UIView()
-        
+        tableView.backgroundColor = appColor
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         
@@ -99,6 +99,6 @@ extension AccountSummaryViewController {
                                                        accountName: "Growth Fund",
                                                        balance: 15000.00)
 
-        accounts.append(contentsOf: [savings, visa, masterCard, investment1, investment2])
+        accounts.append(contentsOf: [savings, chequing, visa, masterCard, investment1, investment2])
     }
 }
