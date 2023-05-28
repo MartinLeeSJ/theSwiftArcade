@@ -10,6 +10,9 @@ import UIKit
 class ShakyBellView: UIView {
     
     let imageView = UIImageView()
+    let countButtonView = UIButton()
+    
+    let buttonHeight: CGFloat = 16
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,19 +38,36 @@ extension ShakyBellView {
     }
     
     func style() {
-        addSubview(imageView)
         translatesAutoresizingMaskIntoConstraints = false
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         let image = UIImage(systemName: "bell.fill")!.withTintColor(.white, renderingMode: .alwaysOriginal)
         imageView.image = image
+        
+        countButtonView.translatesAutoresizingMaskIntoConstraints = false
+        countButtonView.backgroundColor = .systemRed
+        countButtonView.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        countButtonView.layer.cornerRadius = buttonHeight / 2
+        countButtonView.setTitle("9", for: .normal)
+        countButtonView.setTitleColor(.white, for: .normal)
     }
     
     func layout() {
+        addSubview(imageView)
+        addSubview(countButtonView)
+        
         NSLayoutConstraint.activate([
             imageView.heightAnchor.constraint(equalToConstant: 24),
             imageView.widthAnchor.constraint(equalToConstant: 24), 
             imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            countButtonView.widthAnchor.constraint(equalToConstant: buttonHeight),
+            countButtonView.heightAnchor.constraint(equalToConstant: buttonHeight),
+            countButtonView.topAnchor.constraint(equalTo: imageView.topAnchor),
+            countButtonView.leadingAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1)
         ])
     }
 }
