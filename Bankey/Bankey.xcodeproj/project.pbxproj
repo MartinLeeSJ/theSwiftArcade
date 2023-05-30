@@ -32,6 +32,8 @@
 		5B979A982A1F2CF700BB897F /* CurrencyFormatterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B979A972A1F2CF700BB897F /* CurrencyFormatterTest.swift */; };
 		5BFA79C42A25D2C100704DAF /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA79C32A25D2C100704DAF /* Date+Utils.swift */; };
 		5BFA79C62A25D44300704DAF /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA79C52A25D44300704DAF /* AccountSummaryViewController+Networking.swift */; };
+		5BFA79C82A260CD600704DAF /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA79C72A260CD600704DAF /* ProfileTests.swift */; };
+		5BFA79CA2A260E5100704DAF /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA79C92A260E5100704DAF /* AccountTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		5B979A972A1F2CF700BB897F /* CurrencyFormatterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTest.swift; sourceTree = "<group>"; };
 		5BFA79C32A25D2C100704DAF /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		5BFA79C52A25D44300704DAF /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
+		5BFA79C72A260CD600704DAF /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		5BFA79C92A260E5100704DAF /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				5B979A972A1F2CF700BB897F /* CurrencyFormatterTest.swift */,
+				5BFA79C92A260E5100704DAF /* AccountTests.swift */,
+				5BFA79C72A260CD600704DAF /* ProfileTests.swift */,
 			);
 			path = BankeyTests;
 			sourceTree = "<group>";
@@ -398,6 +404,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B979A982A1F2CF700BB897F /* CurrencyFormatterTest.swift in Sources */,
+				5BFA79CA2A260E5100704DAF /* AccountTests.swift in Sources */,
+				5BFA79C82A260CD600704DAF /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

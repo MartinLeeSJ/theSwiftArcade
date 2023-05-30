@@ -53,7 +53,7 @@ class AccountSummaryHeaderView: UIView {
             contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
-        
+            
         setupShakyBell()
     }
     

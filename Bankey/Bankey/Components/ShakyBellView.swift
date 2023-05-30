@@ -59,15 +59,16 @@ extension ShakyBellView {
         NSLayoutConstraint.activate([
             imageView.heightAnchor.constraint(equalToConstant: 24),
             imageView.widthAnchor.constraint(equalToConstant: 24), 
-            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
             countButtonView.widthAnchor.constraint(equalToConstant: buttonHeight),
             countButtonView.heightAnchor.constraint(equalToConstant: buttonHeight),
             countButtonView.topAnchor.constraint(equalTo: imageView.topAnchor),
-            countButtonView.leadingAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1)
+            // countButtonView.leadingAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1) 왜 여기서 오류가 나는 지
+            countButtonView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
     }
 }
