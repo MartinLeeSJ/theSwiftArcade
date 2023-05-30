@@ -7,33 +7,33 @@
 
 import UIKit
 
-class AccountSummaryCell: UITableViewCell {
+enum AccountType: String, Codable {
+    case Banking
+    case CreditCard
+    case Investment
     
-    enum AccountType: String {
-        case Banking
-        case CreditCard
-        case Investment
-        
-        var balanceLable: String {
-            switch self {
-            case .Investment:
-                return "Value"
-            default:
-                return "Current Balance"
-            }
-        }
-        
-        var backgroundColor: UIColor? {
-            switch self {
-            case .Banking:
-                return appColor
-            case .CreditCard:
-                return .systemOrange
-            case .Investment:
-                return .systemPurple
-            }
+    var balanceLable: String {
+        switch self {
+        case .Investment:
+            return "Value"
+        default:
+            return "Current Balance"
         }
     }
+    
+    var backgroundColor: UIColor? {
+        switch self {
+        case .Banking:
+            return appColor
+        case .CreditCard:
+            return .systemOrange
+        case .Investment:
+            return .systemPurple
+        }
+    }
+}
+
+class AccountSummaryCell: UITableViewCell {
     
     struct ViewModel {
         let accountType: AccountType
