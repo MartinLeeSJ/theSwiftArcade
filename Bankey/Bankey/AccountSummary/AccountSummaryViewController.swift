@@ -126,7 +126,7 @@ extension AccountSummaryViewController {
             case .success(let profile):
                 self.profile = profile
             case .failure(let error):
-                print(error.localizedDescription)
+                self.showAlert(with: error)
             }
             group.leave()
         }
@@ -137,7 +137,7 @@ extension AccountSummaryViewController {
             case .success(let accounts):
                 self.accoutns = accounts
             case .failure(let error):
-                print(error.localizedDescription)
+                self.showAlert(with: error)
             }
             group.leave()
         }
@@ -167,6 +167,28 @@ extension AccountSummaryViewController {
                                          accountName: $0.name,
                                          balance: $0.amount)
         }
+    }
+    
+    private func showAlert(with error: NetworkError) {
+        var title: String
+        var message: String
+        
+        switch error {
+        case .serverError:
+            title = "Server Error"
+            message = "Ensure you are connected to the Internet. Please try again"
+        case .decodingError:
+            title = "Decoding Error"
+            message = "We could not process your request. Please try again"
+        }
+        
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title:"OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
 }
